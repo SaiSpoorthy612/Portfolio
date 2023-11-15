@@ -1,0 +1,232 @@
+ <!-- <!DOCTYPE html> -->
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/fe1091846d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="Logo.jpg" class="logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#services">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark"></i>
+                </ul>
+                <i class="fa-solid fa-bars"></i>
+            </nav>
+            <div class="header-text">
+                <p>Software Developer</p>
+                <h1>Hi, I am <span>Sai Spoorthy Varala</span></h1>
+
+            </div>
+        </div>
+    </div>
+<!------------ABOUT---------------------->
+
+    <div id="About">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1"> <img src="Spoo.jpg"></div>
+                
+                <div class="about-col-2">
+                     <h1 class="sub-title">About Me</h1>
+                     <p> Hello, I'm Sai Spoorthy Varala, a tech enthusiast on a journey of continuous learning and innovation. Currently pursuing a Master's degree in Computer Science at California State University, Fullerton.
+ 
+                        I've laid a strong foundation in Computer Science and Engineering during my undergraduate years at Sreenidhi Institute of Science and Technology. 
+                        My skill set includes expertise in Python, Java, C, Web Technologies, Data Management, Data Modeling, and tools like Spring and Spring Boot, gained through both academic and professional experiences.
+                        
+                        As an Application Development Analyst at Accenture Solutions, I excelled in deploying BMIDE components and upgrading Teamcenter modules on Azure Cloud. I have also worked on full stack development and Machine learning during my internship.
+                        
+                        I'm actively looking for opportunities that will challenge and motivate me to make further contributions to the ever-evolving world of technology. Let's connect and explore new possibilities together!</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><b><span>Languages:</span></b><br> Python, Java, JavaScript, C, C++, HTML/CSS</li>
+                                <li><b><span>Databases:</span></b><br> MySQL, MongoDB</li>
+                                <li><b><span>Libraries:</span></b><br> NumPy, Pandas, OpenCV</li>
+                                <li><b><span>Frameworks:</span></b><br> Bootstrap</li>
+                                <li><b><span>Tools & Technologies:</span></b><br> Git, AWS, GCP,  JIRA</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <li><b><span>Application Development Analyst</span></b><br> Accenture Private Limited</li>
+                                <li><b><span>Intern</span></b><br> Doel Soft</li>
+                                <li><b><span>Intern</span></b><br> Technovolt Solutions</li>
+
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <li><b><span>California State University, Fullerton</span></b><br> Master's in Computer Science</li>
+                                <li><b><span>Sreenidhi Institue of Science and Technology</span></b><br> Bachelor's in Computer Science and Engineering</li>
+                                
+                        </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!---------------------------SERVICES------------------->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Application Development</h2>
+                <p>
+                    <ul>
+                        <li>Deployed and configured BMIDE components, ensuring proper integration and functionality </li>
+                        <li>Installed and upgraded Teamcenter modules on Azure Cloud, ensuring seamless operations.</li>
+                        <li>Analyzed software problems and developed effective solutions and coding fixes.</li>
+                        <li>Executed server software installation, configuration, and troubleshooting for optimal performance</li>
+                        
+                      </ul>
+                </p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-adn"></i>
+                <h2>Intern</h2>
+                <ul>
+                    <li>
+                          Designed and developed a dynamic online hotel booking website using Java
+                    </li>
+                    <li>
+                      Implemented robust server-side functionality to handle user requests, database interactions, and data processing.
+                    </li>
+                    <li>
+                          Utilized Java frameworks and libraries to create a scalable and secure web application.
+                    </li>
+                    <li>Integrated payment gateways and ensure seamless transactions for users.</li>
+                    
+                  </ul>
+                  <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-adn"></i>
+                <h2>Intern</h2>
+                <ul>
+                    <li>Designed and developed a web based Machine Learning application to predict cardiac attack chances by inputting past data into the ML classification model.</li>
+                    <li>Used Random Forest Algorithm to achieve the results.</li>
+                    
+                  </ul>
+                  <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-----------------------PROJECTS----------------->
+<div id="projects">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="senti.jpg">
+                <div class="layer">
+                    <h3>Sentimental Anlaysis</h3>
+                    <p>A Sentiment analysis project was implemented using machine learning methods, Amazon API Gateway Mapping Templates, and Amazon SageMaker.
+                    </p>
+                    <a href="#"> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                
+            </div>
+            <div class="work">
+                <img src="cardiac.jpg">
+                <div class="layer">
+                    <h3>Cardiac Attack Risk Prediction Webapp</h3>
+                    <p>Designed and developed a web based Machine Learning application to predict cardiac attack chances 
+                        </p>
+                        <a href="#"> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                
+            </div>
+            <div class="work">
+                <img src="security.jpg">
+                <div class="layer">
+                    <h3>Face Recognition Using Machine Learning for Security</h3>
+                    <p>Achieved real-time face detection and identification, improved access control and monitoring using Machine learning using convolution neural networks</p>
+                        <a href="#"> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        
+                </div>
+                
+            </div>
+
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+<!--------------------CONTACT-------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-regular fa-envelope"></i>spoorthyvarala612@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>+1 657-319-1382</p>
+                <div class="social-icons">
+                    <a href="www.linkedin.com/in/saispoorthyvarala55"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="SAI SPOORTHY VARALA_RESUME_CSUFIT.pdf" download class="btn btn2">Download CV</a>
+                
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your email" required>
+                    <textarea name="Message" rows="'6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright Sai Spoorthy Varala. Made with <i class="fa-solid fa-heart"></i></p>
+    </div>
+</div>
+
+
+
+
+<script>
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+    
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycby0d4sMYK26KJ-6DLH8O726mx08li-kmHYzBMsFgTGIo923S_dEteh09hYzZLE3HO32/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+</body>
+</html>
