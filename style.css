@@ -3,6 +3,7 @@
     padding: 0;
     font-family: Arial, sans-serif;
     box-sizing: border-box;
+    
 
 }
 html{
@@ -32,26 +33,30 @@ nav{
     flex-wrap: wrap;
 }
 .logo{
-    width: 300px;
+    width: 500px;
 
 
 }
 nav ul li{
     display: inline-block;
     list-style: none;
-    margin: 10px 20px
+    margin: 10px 20px;
+    font-family: 'Times New Roman', Times, serif;
+    
 }
 nav ul li a{
     color:#fff;
     text-decoration: none;
     font-size: 18px;
     position: relative ;
+    font-family: 'Times New Roman', Times, serif;
+    
 }
 nav ul li a::after{
     content: '';
     width: 0;
     height: 3px;
-    background: #ff004f;
+    background: #b54769;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -71,13 +76,14 @@ nav ul li a:hover::after{
 
 }
 .header-text h1 span{
-    color: #ff004f;
+    color: #b54769;
 
 }
 /*----------------------ABOUT*/
 #About{
     padding: 80px 0;
     color: #ababab;
+    font-family: 'Times New Roman', Times, serif;
 }
 .row{
     display: flex;
@@ -91,11 +97,13 @@ nav ul li a:hover::after{
 .about-col-1 img{
     width:100%;
     border-radius: 15px;
+    height:100%
 
 
 }
 .about-col-2{
     flex-basis: 60%;
+    font-family: 'Times New Roman', Times, serif;
 }
 .sub-title{
     font-size: 60px;
@@ -118,7 +126,7 @@ nav ul li a:hover::after{
     content:'';
     width: 0;
     height: 3px;
-    background: #ff004f;
+    background: #b54769;
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -147,11 +155,14 @@ nav ul li a:hover::after{
 
 /*--------------------services-------------------*/
 #services{
-    padding: 30px,0;
+    padding: 20px,0;
+    font-family: 'Times New Roman', Times, serif;
 }
 .services-list{
     display:grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+   
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: repeat(1, minmax(200px, 3fr));
     grid-gap: 40px ;
     margin-top: 50px;
 }
@@ -162,6 +173,7 @@ nav ul li a:hover::after{
     font-weight: 300;
     border-radius: 10px;
     transition: background 0.5s, transform 0.5s;
+    font-family: 'Times New Roman', Times, serif;
 
 }
 .services-list div i{
@@ -172,6 +184,7 @@ nav ul li a:hover::after{
     font-size: 30px;
     font-weight: 500;
     margin-bottom: 15px;
+    font-family: 'Times New Roman', Times, serif;
 }
 .services-list div a{
     text-decoration: none;
@@ -179,9 +192,10 @@ nav ul li a:hover::after{
     font-size: 12px;
     margin-top: 20px;
     display: inline-block;
+    font-family: 'Times New Roman', Times, serif;
 }
 .services-list div:hover{
-    background: #ff004f;
+    background: #888;
     transform: translateY(-10px);
 }
  /*-----------------------PROJECTS-------------------*/
@@ -189,18 +203,38 @@ nav ul li a:hover::after{
     padding:50px 0;
     
  }
+ .project-box {
+    border: 2px solid #ccc; /* Border for the box */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside the box */
+    
+}
+.project-box:hover{
+    background: #888;
+     /* Adjust the distance of the hover effect */
+   
+}
  .work-list{
     display:grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    grid-gap: 40px ;
-    margin-top: 50px;
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(2, minmax(200px, 1fr)); /* Adjusted for 2 columns */
+    grid-gap: 30px;
+    margin-top: 30px;
  }
 
  .work{
     border-radius: 10px;
     position: relative;
     overflow: hidden;
+    height: 100%; /* Ensure all work elements occupy equal space */
  }
+
+ .work:hover{
+    background: #888;
+        transform: translateY(-5px); /* Adjust the distance of the hover effect */
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0);
+ }
+ 
  .work img{
     width:100%;
     border-radius: 10px;
@@ -211,7 +245,7 @@ nav ul li a:hover::after{
  .layer{
     width: 100%;
     height:0%;
-    background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+    background: linear-gradient(rgba(0,0,0,0.6), #888);
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -235,7 +269,7 @@ nav ul li a:hover::after{
  }
  .layer a{
     margin-top: 20px;
-    color: #ff004f;
+    color: #888;
     text-decoration: none;
     font-size: 18px;
     line-height: 50px;
@@ -258,7 +292,7 @@ nav ul li a:hover::after{
     display: block;
     margin: 50px auto;
     width: fit-content;
-    border: 1px solid #ff004f;
+    border: 1px solid #888;
     padding: 14px 50px;
     border-radius: 6px;
    
@@ -270,7 +304,7 @@ nav ul li a:hover::after{
 
  }
  .btn:hover{
-    background: #ff004f;
+    background: #888;
     
  }
  /*-----------CONTACT--------------------*/
@@ -286,7 +320,7 @@ nav ul li a:hover::after{
 
 }
 .contact-left p i{
-    color:#ff004f;
+    color:#888;
     margin-right: 15px;
     font-size: 25px;
 }
@@ -302,12 +336,12 @@ nav ul li a:hover::after{
     transition: transform 0.5s;
 }
 .social-icons a:hover{
-    color:#ff004f;
+    color:#888;
     transform: translateY((-5px));
 }
 .btn.btn2{
     display:inline-block;
-    background: #ff004f;
+    background: #888;
 }
 .contact-right form{
     width: 100%;
@@ -342,7 +376,7 @@ form .btn2{
 
 }
 .copyright i{
-    color: #ff004f;
+    color: #888;
 }
 
 /*--------------------CSS for small screen---------------------*/
@@ -362,7 +396,7 @@ nav .fa-solid{
         font-size: 25px;
     }
     nav ul{
-        background: #ff004f;
+        background: #888;
         position: fixed;
         top:0;
         right: 0;
@@ -383,4 +417,155 @@ nav .fa-solid{
         cursor: pointer;
 
     }
+}
+
+
+/*--------------------SKILLS---------------------*/
+
+#skills {
+    padding: 80px 0;
+    color: #ababab;
+}
+
+.skills-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.skill-container {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: calc(50% - 20px); /* Adjust the width as needed */
+}
+
+
+
+
+/*---------------EDUCATION----------------->*/
+
+
+
+
+#educations {
+    padding: 30px 0;
+}
+
+.education{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    text-align: center;
+}
+.education div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+
+}
+
+.education h1 {
+    color: white;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.education i {
+    font-style: italic;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+
+.education p {
+    margin-top: 15px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.education p span {
+    color: #888;
+    text-align: center;
+}
+
+.education:hover {
+    background: #888;
+    transform: translateY(-5px); /* Adjust the distance of the hover effect */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5); /* Optional: Add box shadow for a more pronounced effect */
+}
+
+
+
+
+
+
+  
+
+
+/* Styles for Skills Section */
+#skills {
+  padding: 80px 0;
+  color: #ababab;
+}
+
+.sub-title {
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 36px;
+  font-weight: 600;
+  color: white;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.skill-container {
+  
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  color:#000;
+}
+
+.tab-links {
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 10px;
+  color: black;
+}
+.tab-links h1{
+    font-size: large;
+
+}
+
+.tab-contents {
+  display: none;
+}
+
+.language-container {
+  background-color: #888;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.language-container h3 {
+  color: #fff;
 }
