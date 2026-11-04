@@ -2,6 +2,10 @@ import { ArrowRight, Download, MapPin } from 'lucide-react'
 import { profile } from '../data/content'
 import { asset, image } from '../asset'
 import { GithubIcon, LinkedinIcon } from './BrandIcons'
+import Typewriter from './Typewriter'
+
+// "an AI Engineer", "a Full-Stack Developer", …
+const rolesWithArticle = profile.roles.map((r) => `${/^[aeiou]/i.test(r) ? 'an' : 'a'} ${r}`)
 
 export default function Hero() {
   return (
@@ -17,7 +21,12 @@ export default function Hero() {
               {profile.name.split(' ').slice(0, 2).join(' ')}
             </span>
           </h1>
-          <p className="mt-4 text-xl font-medium text-zinc-700 sm:text-2xl dark:text-zinc-300">{profile.headline}</p>
+          <p className="mt-4 min-h-[2em] text-xl font-medium text-zinc-700 sm:text-2xl dark:text-zinc-300">
+            <span className="sr-only">{profile.headline}</span>
+            <span aria-hidden="true">
+              I'm <Typewriter words={rolesWithArticle} />
+            </span>
+          </p>
           <p className="mt-6 max-w-xl leading-relaxed text-zinc-600 dark:text-zinc-400">{profile.tagline}</p>
 
           <div className="mt-10 flex flex-wrap items-center gap-3">

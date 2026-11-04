@@ -7,6 +7,7 @@ import Skills from './components/Skills'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import Terminal from './components/Terminal'
 
 export default function App() {
   return (
@@ -19,6 +20,9 @@ export default function App() {
       <Nav />
       <main className="mx-auto max-w-5xl px-4 sm:px-6">
         <Hero />
+        <section aria-label="Interactive terminal" className="pb-8">
+          <Terminal />
+        </section>
         <About />
         <ExperienceSection />
         <EducationSection />

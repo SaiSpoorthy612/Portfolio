@@ -43,6 +43,8 @@ export type SkillGroup = {
 export const profile = {
   name: 'Sai Spoorthy Varala',
   headline: 'AI Engineer & Full-Stack Developer',
+  // Cycled by the typing animation in the hero
+  roles: ['AI Engineer', 'Full-Stack Developer', 'LLM App Builder', 'ML Engineer'],
   tagline:
     'I build intelligent, reliable software — from LLM-powered apps and machine learning models to the full-stack systems that bring them to people.',
   location: 'Los Angeles, CA',
