@@ -42,9 +42,9 @@ export type SkillGroup = {
 
 export const profile = {
   name: 'Sai Spoorthy Varala',
-  headline: 'AI Engineer — LLM applications, generative AI & healthcare AI',
+  headline: 'AI Engineer & Full-Stack Developer',
   tagline:
-    'I build end-to-end ML and generative AI systems — agentic LLM workflows, real-time speech-to-text pipelines and LLM-as-a-Judge evaluation — and ship them to production.',
+    'I build intelligent, reliable software — from LLM-powered apps and machine learning models to the full-stack systems that bring them to people.',
   location: 'Los Angeles, CA',
   photo: 'profile.jpg',
   resume: 'resume/SAISPOORTHYVARALA_RESUME.pdf',
@@ -52,18 +52,24 @@ export const profile = {
   phone: '+1 657-319-1382',
   linkedin: 'https://www.linkedin.com/in/saispoorthyvarala',
   github: 'https://github.com/SaiSpoorthy612',
-  about: [
-    "I'm a software engineer with 4+ years of experience building end-to-end ML and generative AI systems, from data processing and model evaluation to production deployment.",
-    'I specialize in LLM applications: agentic workflows with tool calling, RAG over embeddings, real-time speech-to-text pipelines, and LLM-as-a-Judge evaluation systems that keep AI output accurate and reliable, built with Claude, OpenAI GPT and LangChain.',
-    "I work across the stack with Python, Java, React, REST APIs and database design, deploying on AWS and Azure with CI/CD through GitHub Actions.",
-  ],
+  about:
+    "I'm a software engineer with 4+ years of experience building AI products end to end, from data and models to production APIs. I enjoy turning messy real-world workflows into reliable software that people actually use.",
 }
 
-// Quick facts shown beside the About text
-export const stats = [
-  { value: '4+', label: 'Years of experience' },
-  { value: 'M.S.', label: 'Computer Science, CSUF' },
-  { value: 'AZ-900', label: 'Microsoft Azure certified' },
+// "What I do" cards in the About section
+export const focusAreas = [
+  {
+    title: 'LLM & Generative AI',
+    description: 'Agentic workflows with tool calling, RAG over embeddings, structured outputs and real-time speech-to-text, built with Claude, GPT and LangChain.',
+  },
+  {
+    title: 'ML Engineering & Evaluation',
+    description: 'End-to-end model training and deployment, plus LLM-as-a-Judge systems and evaluation rubrics that keep AI output accurate.',
+  },
+  {
+    title: 'Full-stack & Cloud',
+    description: 'Python, Java, .NET and React services with REST APIs and solid database design, shipped on AWS and Azure with CI/CD.',
+  },
 ]
 
 // Portfolio-length summaries; the full detail lives in the resume PDF
@@ -160,7 +166,7 @@ export const skills: SkillGroup[] = [
   },
   {
     name: 'Languages & Frontend',
-    items: ['Python', 'TypeScript', 'JavaScript', 'Java', 'C#', 'SQL', 'React'],
+    items: ['Python', 'TypeScript', 'JavaScript', 'Java', 'C#', '.NET Core', 'SQL', 'React'],
   },
   {
     name: 'Backend',
