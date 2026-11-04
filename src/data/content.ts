@@ -8,7 +8,9 @@ export type Experience = {
   location: string
   period: string
   logo?: string
+  summary: string
   highlights: string[]
+  stack: string[]
 }
 
 export type Education = {
@@ -44,7 +46,7 @@ export const profile = {
   tagline:
     'I build end-to-end ML and generative AI systems — agentic LLM workflows, real-time speech-to-text pipelines and LLM-as-a-Judge evaluation — and ship them to production.',
   location: 'Los Angeles, CA',
-  photo: 'SPOORTHY.jpeg',
+  photo: 'profile.jpg',
   resume: 'resume/SAISPOORTHYVARALA_RESUME.pdf',
   email: 'spoorthyvarala612@gmail.com',
   phone: '+1 657-319-1382',
@@ -57,28 +59,28 @@ export const profile = {
   ],
 }
 
-// Headline numbers shown beside the About text
+// Quick facts shown beside the About text
 export const stats = [
-  { value: '4+', label: 'Years building software' },
-  { value: '~70%', label: 'Less clinician documentation time' },
-  { value: '100%', label: 'Automated chart QA coverage' },
+  { value: '4+', label: 'Years of experience' },
+  { value: 'M.S.', label: 'Computer Science, CSUF' },
+  { value: 'AZ-900', label: 'Microsoft Azure certified' },
 ]
 
+// Portfolio-length summaries; the full detail lives in the resume PDF
 export const experience: Experience[] = [
   {
     role: 'Software Developer, Level II',
     company: 'HealthXMD, Inc.',
     location: 'Los Angeles, CA',
     period: 'Jul 2024 – Present',
+    summary: 'Building HIPAA-compliant generative AI for clinical documentation and quality assurance.',
     highlights: [
-      "Designed and developed HIPAA-compliant AI clinical documentation services with Python, OpenAI GPT models, LangChain and Flask, cutting clinicians' assessment time from 40–50 to 10–15 minutes (~70% reduction).",
-      'Engineered high-throughput GenAI pipelines that turn transcripts into structured data in ~30 seconds using prompt design, structured outputs and parallel batch processing, and designed the SQL Server and MongoDB schemas.',
-      'Architected an LLM-as-a-Judge QC/QA engine that moved chart review from manual sampling to 100% automated daily coverage; 88% of flagged inconsistencies were resolved and 87% of flagged plan-of-care gaps were added to charts.',
-      'Set the chart-quality standard with a 40+ criterion evaluation rubric and review SOPs, cutting review time per flagged chart from ~15 to ~5 minutes.',
-      'Developed a multimodal voice-to-chart workflow pairing real-time speech-to-text with the LLM extraction pipeline and secure mobile APIs, producing structured charts within ~30 seconds of a visit ending.',
-      'Implemented async microservices with REST APIs secured by HMAC request signing and JWT on AWS (EC2, ECS), Docker and GitHub Actions CI/CD, cutting deployment time from ~2 hours to under 15 minutes.',
-      'Automated a hybrid rule-based and LLM pipeline for pharmacy invoices via the Gmail API — regex parses ~70%, GPT handles the rest — reducing manual billing reconciliation time by ~60%.',
+      "Built AI documentation services that cut clinicians' assessment time by ~70%, from 40–50 to 10–15 minutes.",
+      'Architected an LLM-as-a-Judge engine that moved chart QA from manual sampling to 100% automated daily review.',
+      'Shipped a real-time voice-to-chart workflow that produces structured charts within ~30 seconds of a visit.',
+      'Cut deployments from ~2 hours to under 15 minutes with Docker, AWS ECS and GitHub Actions.',
     ],
+    stack: ['Python', 'OpenAI GPT', 'LangChain', 'Flask', 'SQL Server', 'MongoDB', 'AWS', 'Docker'],
   },
   {
     role: 'Application Development Analyst',
@@ -86,11 +88,13 @@ export const experience: Experience[] = [
     location: 'Hyderabad, India',
     period: 'Jul 2021 – Aug 2022',
     logo: 'accenture.jpg',
+    summary: 'Migrated enterprise PLM applications from on-premises to Microsoft Azure.',
     highlights: [
-      'Migrated 15 on-premises enterprise PLM applications and their data to Microsoft Azure with Azure Data Factory and Database Migration Service, moving SQL Server to Azure SQL Managed Instance with zero data loss.',
-      'Provisioned Azure VMs, Load Balancer, Virtual Networks and Key Vault through ARM templates and Azure DevOps pipelines, cutting environment setup from ~2 days to ~4 hours, with Backup and Site Recovery failover validated for all 15 apps.',
-      'Monitored VM and application health with Azure Monitor and Log Analytics, triaging and resolving 60+ production incidents after go-live.',
+      'Moved 15 enterprise applications and their SQL Server data to Azure with zero data loss.',
+      'Automated environment provisioning with ARM templates and Azure DevOps, cutting setup from ~2 days to ~4 hours.',
+      'Resolved 60+ production incidents after go-live using Azure Monitor and Log Analytics.',
     ],
+    stack: ['Azure', 'Azure Data Factory', 'SQL Server', 'ARM Templates', 'Azure DevOps'],
   },
   {
     role: 'Machine Learning Engineer',
@@ -98,11 +102,13 @@ export const experience: Experience[] = [
     location: 'Coimbatore, India',
     period: 'May 2020 – Dec 2020',
     logo: 'techvolt.jpeg',
+    summary: 'Built end-to-end ML pipelines and real-time prediction services.',
     highlights: [
-      'Built end-to-end ML pipelines in Python, Pandas and scikit-learn — ETL from APIs, databases and logs through cleaning, feature engineering and EDA on 50K+ records.',
-      'Trained and tuned 7 classification and regression models with cross-validation and hyperparameter search; the best reached 93% accuracy, up from an 81% baseline.',
-      'Deployed models as real-time REST prediction services with under 100 ms response time.',
+      'Built pipelines from ETL through feature engineering and analysis on 50K+ records.',
+      'Raised model accuracy from an 81% baseline to 93% across 7 tuned models.',
+      'Served models as REST APIs with under 100 ms response time.',
     ],
+    stack: ['Python', 'Pandas', 'scikit-learn', 'REST APIs'],
   },
   {
     role: 'Software Developer Intern',
@@ -110,10 +116,12 @@ export const experience: Experience[] = [
     location: 'Hyderabad, India',
     period: 'Jun 2019 – Nov 2019',
     logo: 'doelsoft.jpeg',
+    summary: 'Built back-end services for a hotel booking platform.',
     highlights: [
-      'Built back-end services for a hotel booking platform with Java, Spring Boot and MySQL, optimizing queries with indexing to cut room-search response time from ~2 s to under 500 ms.',
-      'Delivered 15+ RESTful APIs for room search, reservations and authentication using a layered controller-service-repository design with JUnit tests.',
+      'Delivered 15+ Spring Boot REST APIs for room search, reservations and authentication.',
+      'Cut room-search response time from ~2 s to under 500 ms through schema design and indexing.',
     ],
+    stack: ['Java', 'Spring Boot', 'MySQL', 'JUnit'],
   },
 ]
 
@@ -138,30 +146,33 @@ export const certifications: Certification[] = [
   { name: 'Azure Fundamentals (AZ-900)', issuer: 'Microsoft Certified' },
 ]
 
+// Highlighted at the top of the Skills section
+export const coreStack = ['Python', 'TypeScript', 'React', 'LangChain', 'OpenAI & Claude', 'RAG', 'PostgreSQL', 'AWS', 'Azure', 'Docker']
+
 export const skills: SkillGroup[] = [
   {
-    name: 'AI & Generative AI',
-    items: ['LLMs (Claude, GPT)', 'LangChain', 'AI Agents', 'Agentic Workflows', 'Tool Calling', 'RAG', 'Embeddings', 'Prompt Design', 'Structured Outputs', 'Speech-to-Text', 'NLP', 'Document Processing'],
+    name: 'AI & LLMs',
+    items: ['LLMs (Claude, GPT)', 'LangChain', 'AI Agents', 'Tool Calling', 'RAG', 'Embeddings', 'Prompt Engineering', 'Structured Outputs', 'Speech-to-Text', 'NLP'],
   },
   {
-    name: 'ML & LLM Evaluation',
-    items: ['End-to-End ML', 'Model Training & Deployment', 'LLM-as-a-Judge', 'Evaluation Rubrics', 'LLM Output Validation', 'Data Quality Validation', 'Precision / Recall', 'Cross-Validation', 'TensorFlow', 'scikit-learn', 'Pandas'],
+    name: 'ML & Evaluation',
+    items: ['TensorFlow', 'scikit-learn', 'Pandas', 'Model Training & Deployment', 'LLM-as-a-Judge', 'Evaluation Rubrics', 'Data Quality Validation'],
   },
   {
-    name: 'Languages',
-    items: ['Python', 'SQL', 'Java', 'C#', 'JavaScript', 'TypeScript', 'React'],
+    name: 'Languages & Frontend',
+    items: ['Python', 'TypeScript', 'JavaScript', 'Java', 'C#', 'SQL', 'React'],
   },
   {
     name: 'Backend',
-    items: ['Flask', 'ASP.NET Core', 'Spring Boot', 'REST APIs', 'Microservices', 'Async Processing', 'HMAC / JWT Auth'],
+    items: ['Flask', 'Spring Boot', 'ASP.NET Core', 'REST APIs', 'Microservices', 'JWT / HMAC Auth'],
   },
   {
     name: 'Data',
-    items: ['SQL Server', 'MongoDB', 'PostgreSQL (pgvector)', 'MySQL', 'Chroma', 'Azure Data Factory', 'ETL Pipelines'],
+    items: ['PostgreSQL + pgvector', 'SQL Server', 'MongoDB', 'MySQL', 'Chroma', 'ETL Pipelines'],
   },
   {
     name: 'Cloud & DevOps',
-    items: ['AWS (EC2, ECS, Lambda, S3, SageMaker)', 'Azure', 'Docker', 'Kubernetes', 'GitHub Actions', 'Azure DevOps', 'Git', 'Postman', 'Swagger', 'JUnit', 'Agile / Scrum'],
+    items: ['AWS (EC2, ECS, Lambda, S3, SageMaker)', 'Azure', 'Docker', 'Kubernetes', 'GitHub Actions', 'Azure DevOps', 'Git'],
   },
 ]
 

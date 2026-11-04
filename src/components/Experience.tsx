@@ -26,9 +26,17 @@ export default function ExperienceSection() {
                 </p>
               </div>
             </div>
-            <ul className="mt-4 list-disc space-y-2 pl-5 leading-relaxed marker:text-accent">
+            <p className="mt-4 font-medium text-zinc-800 dark:text-zinc-200">{job.summary}</p>
+            <ul className="mt-3 list-disc space-y-1.5 pl-5 leading-relaxed marker:text-accent">
               {job.highlights.map((h) => (
                 <li key={h}>{h}</li>
+              ))}
+            </ul>
+            <ul className="mt-4 flex flex-wrap gap-1.5">
+              {job.stack.map((t) => (
+                <li key={t} className="rounded bg-accent/10 px-2 py-0.5 text-xs font-medium text-accent-strong dark:text-accent">
+                  {t}
+                </li>
               ))}
             </ul>
           </li>

@@ -28,7 +28,10 @@ function useTheme() {
 function useActiveSection() {
   const [active, setActive] = useState('')
   useEffect(() => {
-    const sections = links.map((l) => document.querySelector(l.href)).filter((el): el is Element => el !== null)
+    // #top is included so scrolling back to the hero clears the highlight
+    const sections = ['#top', ...links.map((l) => l.href)]
+      .map((href) => document.querySelector(href))
+      .filter((el): el is Element => el !== null)
     const observer = new IntersectionObserver(
       (entries) => {
         for (const e of entries) if (e.isIntersecting) setActive(e.target.id)
