@@ -24,9 +24,27 @@ function useTheme() {
   return [dark, () => setDark((d) => !d)] as const
 }
 
+// Id of the section currently nearest the top of the viewport
+function useActiveSection() {
+  const [active, setActive] = useState('')
+  useEffect(() => {
+    const sections = links.map((l) => document.querySelector(l.href)).filter((el): el is Element => el !== null)
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) if (e.isIntersecting) setActive(e.target.id)
+      },
+      { rootMargin: '-40% 0px -55% 0px' },
+    )
+    sections.forEach((s) => observer.observe(s))
+    return () => observer.disconnect()
+  }, [])
+  return active
+}
+
 export default function Nav() {
   const [open, setOpen] = useState(false)
   const [dark, toggleTheme] = useTheme()
+  const active = useActiveSection()
 
   return (
     <header className="sticky top-0 z-50 border-b border-zinc-200/70 bg-white/80 backdrop-blur dark:border-zinc-800/70 dark:bg-zinc-950/80">
@@ -39,7 +57,11 @@ export default function Nav() {
         <ul className="hidden items-center gap-6 text-sm md:flex">
           {links.map((l) => (
             <li key={l.href}>
-              <a href={l.href} className="text-zinc-600 transition hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white">
+              <a
+                href={l.href}
+                aria-current={active === l.href.slice(1) ? 'true' : undefined}
+                className="text-zinc-600 transition hover:text-zinc-900 aria-[current]:text-accent dark:text-zinc-400 dark:hover:text-white dark:aria-[current]:text-accent"
+              >
                 {l.label}
               </a>
             </li>

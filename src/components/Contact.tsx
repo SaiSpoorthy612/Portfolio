@@ -26,7 +26,7 @@ export default function Contact() {
   }
 
   return (
-    <Section id="contact" title="Contact">
+    <Section id="contact" index="06" title="Contact">
       <div className="grid gap-10 md:grid-cols-2">
         <div>
           <h3 className="text-2xl font-semibold text-zinc-900 dark:text-white">Let's work together.</h3>

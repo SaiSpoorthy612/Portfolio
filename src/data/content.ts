@@ -52,10 +52,17 @@ export const profile = {
   github: 'https://github.com/SaiSpoorthy612',
   about: [
     "I'm a software engineer with 4+ years of experience building end-to-end ML and generative AI systems, from data processing and model evaluation to production deployment.",
-    "At HealthXMD I design HIPAA-compliant AI clinical documentation services: agentic LLM workflows, real-time voice-to-chart pipelines, and LLM-as-a-Judge quality systems that review every chart automatically.",
+    'I specialize in LLM applications: agentic workflows with tool calling, RAG over embeddings, real-time speech-to-text pipelines, and LLM-as-a-Judge evaluation systems that keep AI output accurate and reliable, built with Claude, OpenAI GPT and LangChain.',
     "I work across the stack with Python, Java, React, REST APIs and database design, deploying on AWS and Azure with CI/CD through GitHub Actions.",
   ],
 }
+
+// Headline numbers shown beside the About text
+export const stats = [
+  { value: '4+', label: 'Years building software' },
+  { value: '~70%', label: 'Less clinician documentation time' },
+  { value: '100%', label: 'Automated chart QA coverage' },
+]
 
 export const experience: Experience[] = [
   {

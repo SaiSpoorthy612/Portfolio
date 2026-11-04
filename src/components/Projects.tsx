@@ -6,12 +6,12 @@ import { GithubIcon } from './BrandIcons'
 
 export default function Projects() {
   return (
-    <Section id="projects" title="Projects">
+    <Section id="projects" index="05" title="Projects">
       <div className="grid gap-6 sm:grid-cols-2">
         {projects.map((p) => (
           <article
             key={p.title}
-            className="group overflow-hidden rounded-xl border border-zinc-200 transition hover:-translate-y-0.5 hover:border-zinc-300 dark:border-zinc-800 dark:hover:border-zinc-700"
+            className="group overflow-hidden rounded-xl border border-zinc-200 bg-white transition duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-xl hover:shadow-accent/5 dark:border-zinc-800 dark:bg-zinc-900/40 dark:hover:border-accent/40"
           >
             {p.image && (
               <div className="aspect-[16/9] overflow-hidden bg-zinc-100 dark:bg-zinc-900">

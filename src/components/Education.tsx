@@ -5,10 +5,10 @@ import Logo from './Logo'
 
 export default function EducationSection() {
   return (
-    <Section id="education" title="Education">
+    <Section id="education" index="03" title="Education">
       <div className="grid gap-6 md:grid-cols-2">
         {education.map((e) => (
-          <div key={e.school} className="flex gap-4 rounded-xl border border-zinc-200 p-5 dark:border-zinc-800">
+          <div key={e.school} className="flex gap-4 rounded-xl border border-zinc-200 bg-zinc-50 p-5 dark:border-zinc-800 dark:bg-zinc-900/50">
             <Logo src={e.logo} name={e.school} />
             <div>
               <h3 className="font-semibold text-zinc-900 dark:text-white">{e.school}</h3>

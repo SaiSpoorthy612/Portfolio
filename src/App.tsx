@@ -6,11 +6,16 @@ import EducationSection from './components/Education'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
-import { profile } from './data/content'
+import Footer from './components/Footer'
 
 export default function App() {
   return (
     <>
+      {/* Decorative hero background: grid plus a soft accent glow, spanning the full viewport width */}
+      <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-svh overflow-hidden">
+        <div className="hero-grid absolute inset-0" />
+        <div className="absolute top-1/4 left-1/2 size-[36rem] -translate-x-1/2 rounded-full bg-accent/20 blur-[120px] dark:bg-accent/15" />
+      </div>
       <Nav />
       <main className="mx-auto max-w-5xl px-4 sm:px-6">
         <Hero />
@@ -21,9 +26,7 @@ export default function App() {
         <Projects />
         <Contact />
       </main>
-      <footer className="border-t border-zinc-200 py-8 text-center text-sm text-zinc-500 dark:border-zinc-800">
-        © {new Date().getFullYear()} {profile.name}
-      </footer>
+      <Footer />
     </>
   )
 }

@@ -1,21 +1,23 @@
-import { profile } from '../data/content'
-import { image } from '../asset'
+import { profile, stats } from '../data/content'
 import Section from './Section'
 
 export default function About() {
   return (
-    <Section id="about" title="About">
-      <div className="grid items-start gap-10 md:grid-cols-[220px_1fr]">
-        <img
-          src={image(profile.photo)}
-          alt={profile.name}
-          className="aspect-square w-48 rounded-2xl object-cover ring-1 ring-zinc-200 md:w-full dark:ring-zinc-800"
-        />
+    <Section id="about" index="01" title="About">
+      <div className="grid gap-12 md:grid-cols-[1fr_240px]">
         <div className="space-y-4 text-lg leading-relaxed">
           {profile.about.map((p) => (
             <p key={p}>{p}</p>
           ))}
         </div>
+        <dl className="grid gap-4 sm:grid-cols-3 md:grid-cols-1">
+          {stats.map((s) => (
+            <div key={s.label} className="rounded-xl border border-zinc-200 bg-zinc-50 p-4 dark:border-zinc-800 dark:bg-zinc-900/50">
+              <dt className="text-sm text-zinc-500">{s.label}</dt>
+              <dd className="mt-1 text-3xl font-semibold text-zinc-900 dark:text-white">{s.value}</dd>
+            </div>
+          ))}
+        </dl>
       </div>
     </Section>
   )
